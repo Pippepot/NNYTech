@@ -1,0 +1,15 @@
+Vi skal have lavet en fjende, som kan gå og vende om når den støder på en væg
+
+1. Importer den blå gnaver og træk ham ind i scenen
+
+2. Vi sætter et en rigidbody på fjenden samt en boxcollider
+
+3. Lav scriptet Enemy.cs
+
+4. I scriptet skal vi flytte fjendens position via. rigidbody'en
+
+5. Find ud af om fjenden støder på en væg med physics raycast (ligesom i hoppet)
+
+6. Vend om og gå den anden vej når man har stødt på en væg
+
+7. Få playeren til at dø (respawn) når han støder på fjenden
