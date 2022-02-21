@@ -1,0 +1,11 @@
+Dette projekt indeholder de mest basale og vigtigeste emner inden for programmering (i hvert fald i C#)
+Det er ikke vigtigt, at man når hurtigt igennem alle udfordringerne; det der er vigtigt, er at man forstår løsningerne til opgaven
+Derfor skal man (helst ikke) dele sine løsninger med andre, hvis de ikke har lavet opgaven selv.
+Man må selvfølgelig gerne hjælpe på vej, men man skal selv nå frem til en løsning.
+
+Nok om det!
+Projektet er indelt i 10 (+ 1 bonus) udfordringsniveauer (Når jeg er færdig med projektet)
+Udfordringsniveauerne er indelt i en mængde af udfordringer, som introducerer programmeringskoncepterne (Jeg laver flere udfordringer, så der er en passende stigning i sværhedsgraden)
+
+Det er ikke tænkt, at man skal være færdig med alle udfordringerne ved slutningen af året
+Vi kommer ikke til arbejde så meget med dette projekt; det er et projekt man kan hygge sig med i fritiden eller i timerne, hvis man er hurtigt færdig med det vi ellers arbejder med
