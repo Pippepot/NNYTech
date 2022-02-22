@@ -17,7 +17,7 @@ public class U1_2 : MonoBehaviour
         int[] a = new int[] {23, 45, 76, 45, 767, 273, 405, 340032};
         for (int i = 0; i < a.Length; i++)
         {
-
+            
         }
 
         Dommer.Udfordring1_2(0);
