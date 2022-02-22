@@ -231,43 +231,13 @@ public static class Dommer
         throw new WrongAnswerExeption($"Svaret er ikke korrekt");
     }
     
-    public static void Udfordring4_3(Dictionary<Spiller, int> spillerPoint)
-    {
-        if (spillerPoint.ContainsValue(47) && spillerPoint.ContainsValue(45))
-        {
-            Debug.Log("Svaret er korrekt!");
-            WriteProgress(typeof(U4_2), true);
-            return;
-        }
-
-        WriteProgress(typeof(U4_2), false);
-        throw new WrongAnswerExeption($"Svaret er ikke korrekt");
-    }
-    
-    public static void Udfordring4_4(Hest[] heste)
-    {
-        if (heste.Length == 5 &&
-            Mathf.Round(heste[0].LøbeTid(100)) == 3 &&
-            Mathf.Round(heste[1].LøbeTid(200)) == 7 &&
-            Mathf.Round(heste[2].LøbeTid(500)) == 17 &&
-            Mathf.Round(heste[3].LøbeTid(1000)) == 34 &&
-            Mathf.Round(heste[4].LøbeTid(50000)) == 3571)
-        {
-            Debug.Log("Svaret er korrekt!");
-            WriteProgress(typeof(U3_4), true);
-            return;
-        }
-
-        WriteProgress(typeof(U3_4), false);
-        throw new WrongAnswerExeption($"Det var ikke de rigtige heste, der vandt");
-    }
 
     
 
     #endregion
 
     
-
+ 
     
     private static void WriteProgress(Type type, bool solved)
     {
