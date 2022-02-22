@@ -1,0 +1,40 @@
+- 1
+	- Introduktion til opgave syntax
+	- Introduktion til for loop
+
+- 2
+	- Introduktion til transforms
+	- translation, rotation, scalering
+
+- 3
+	- Introduktion til classes
+	- Properties nævnes
+
+- 4
+	- Dictionaries
+	- Enums
+
+- 5
+	- 2d arrays
+	- Tidligere kompetancer
+
+- 6
+	- Inheritance
+
+- 7
+	- Queues and stacks
+
+- 8
+	- Generics
+
+- 9
+	- Interfaces
+	- Binary
+
+- 10
+	- Test alle færdigheder
+
+- Bonus
+	- Prime and running time complexity
+	- Find ud af hvordan dommer.cs virker og få opgaven til at lyse grøn. Alle hjælpemidler tilladt
+
