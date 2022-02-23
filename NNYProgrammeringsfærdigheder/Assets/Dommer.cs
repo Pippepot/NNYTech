@@ -98,15 +98,27 @@ public static class Dommer
     
     public static void Udfordring2_2(Transform transform)
     {
-        if (transform.position == new Vector3(5, 5, 5) && transform.eulerAngles == new Vector3(180, 45, 23) && transform.localScale == new Vector3(2f, 1.2f, 0.02f))
+        if (transform.position != new Vector3(5, 5, 5))
         {
-            Debug.Log("Svaret er korrekt!");
-            WriteProgress(typeof(U2_2), true);
-            return;
+            WriteProgress(typeof(U2_2), false);
+            throw new WrongAnswerExeption($"{transform.position} er ikke den rigtige position. Positionen skal være (5, 5, 5)");
         }
 
-        WriteProgress(typeof(U2_2), false);
-        throw new WrongAnswerExeption($"Svaret er ikke korrekt");
+        if (transform.eulerAngles != new Vector3(90,0,0))
+        {
+            WriteProgress(typeof(U2_2), false);
+            throw new WrongAnswerExeption($"{transform.eulerAngles} er ikke den rigtige rotation. Rotationen skal være (160, 45, 23)");
+        }
+
+        if (transform.localScale != new Vector3(2f, 1.2f, 0.02f))
+        {
+            WriteProgress(typeof(U2_2), false);
+            throw new WrongAnswerExeption($"{transform.localScale} er ikke den rigtige størrelse. Størrelsen skal være (2f, 1.2f, 0.02f");
+        }
+
+        Debug.Log("Svaret er korrekt!");
+        WriteProgress(typeof(U2_2), true);
+        return;
     }
     
     public static void Udfordring2_3(Transform transform)
