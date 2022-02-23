@@ -13,12 +13,9 @@ public class U2_2 : MonoBehaviour
     
     void Start()
     {
-        transform.position = new Vector3(5, 5, 5);
-        transform.Rotate(new Vector3(90, 0, 0));
-        transform.localScale = new Vector3(2, 1.2f, 0.02f);
+        
 
         Dommer.Udfordring2_2(transform);
-
     }
     
     #region Hint 1

@@ -62,5 +62,7 @@ Bedre feedback når koden ikke virker, så det ikke bliver frustrerende
 Bedre formuleringer
 (Kriger.angrib)
 
+Lav en intro opgave, hvor man bare skal enable opgaven for at det virker
 
+En opgave hvor man bare skal sætte en variabel ind i dommer udfordring()
 
