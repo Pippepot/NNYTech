@@ -38,3 +38,29 @@
 	- Prime and running time complexity
 	- Find ud af hvordan dommer.cs virker og få opgaven til at lyse grøn. Alle hjælpemidler tilladt
 
+
+Feedback
+Ikke nok introduktion til arrays.
+"Fuck arrays"
+- Mads
+
+Godt med farve
+
+Alt for svært
+
+Flere intermediate steps (underopgaver)
+
+Vis svarende selvom det synes for let
+lad dem derefter bruge svarene selv
+
+Lav det dummy proof
+
+Bedre søgeord
+
+Bedre feedback når koden ikke virker, så det ikke bliver frustrerende
+
+Bedre formuleringer
+(Kriger.angrib)
+
+
+
