@@ -96,7 +96,7 @@ public static class Dommer
         }
 
         WriteProgress(typeof(U1_3), false);
-        throw new WrongAnswerExeption($"Ikke korrekt svar");
+        throw new WrongAnswerExeption($"{IntArrayToString(answer)} er ikke det korrekte svar");
     }
     
     public static void Udfordring1_4(int[] answer)
@@ -115,7 +115,7 @@ public static class Dommer
         }
 
         WriteProgress(typeof(U1_4), false);
-        throw new WrongAnswerExeption($"Ikke korrekt svar");
+        throw new WrongAnswerExeption($"{IntArrayToString(answer)} er ikke det korrekte svar");
     }
     
     public static void Udfordring1_5(int[] answer)
@@ -134,12 +134,25 @@ public static class Dommer
         }
 
         WriteProgress(typeof(U1_5), false);
-        throw new WrongAnswerExeption($"Ikke korrekt svar");
+        throw new WrongAnswerExeption($"{IntArrayToString(answer)} er ikke det korrekte svar");
     }
 
     #endregion
     
     #region 2
+    
+    public static void Udfordring2_0(Transform transform)
+    {
+        if (transform.localScale == new Vector3(1, 1, 1))
+        {
+            Debug.Log("Svaret er korrekt!");
+            WriteProgress(typeof(U2_1), true);
+            return;
+        }
+
+        WriteProgress(typeof(U2_1), false);
+        throw new WrongAnswerExeption($"Størrelsen {transform.localScale} er ikke korrekt");
+    }
     
     public static void Udfordring2_1(Transform transform)
     {

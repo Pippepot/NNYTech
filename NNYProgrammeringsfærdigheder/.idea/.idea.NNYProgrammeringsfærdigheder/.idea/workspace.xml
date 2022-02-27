@@ -64,10 +64,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="4312">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="4312" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -89,7 +89,8 @@
       <workItem from="1645193227269" duration="1827000" />
       <workItem from="1645350099377" duration="3177000" />
       <workItem from="1645454750506" duration="5310000" />
-      <workItem from="1645544261977" duration="1360000" />
+      <workItem from="1645544261977" duration="11197000" />
+      <workItem from="1645809964014" duration="570000" />
     </task>
     <servers />
   </component>
@@ -112,24 +113,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Dommer.cs</url>
-          <line>209</line>
-          <properties documentPath="C:\Users\philip\Desktop\Unity\NNYTech\NNYProgrammeringsfærdigheder\Assets\Dommer.cs" initialLine="209" containingFunctionPresentation="method 'Udfordring4_1'">
-            <startOffsets>
-              <option value="7936" />
-            </startOffsets>
-            <endOffsets>
-              <option value="8102" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
