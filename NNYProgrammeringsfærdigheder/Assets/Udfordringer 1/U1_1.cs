@@ -7,13 +7,14 @@ using UnityEngine;
 public class U1_1 : MonoBehaviour
 {
 
-    // Læg de to tal sammen
+    // Læg de to tal 'a' og 'b' sammen
     // Set svaret ind som argument i Dommer.Udfordring1_1('svar her');
     void Start()
     {
         int a = 347437;
         int b = 5769;
         
+        // Svaret skal erstatte '0'
         Dommer.Udfordring1_1(0);
     }
     

@@ -14,6 +14,12 @@ public static class Dommer
 {
     #region 1
     
+    public static void Udfordring1_0()
+    {
+        Debug.Log("Svaret er korrekt!");
+        WriteProgress(typeof(U1_0), true);
+    }
+    
     public static void Udfordring1_1(int answer)
     {
         if (answer == 353206)
@@ -27,21 +33,61 @@ public static class Dommer
         throw new WrongAnswerExeption($"{answer} er ikke det korrekte svar");
     }
     
-    public static void Udfordring1_2(int answer)
+    public static void Udfordring1_2_1(string[] answer)
+    {
+        if (answer == null)
+        {
+            WriteProgress(typeof(U1_2_1), false);
+            throw new WrongAnswerExeption($"Indsæt familieMedlemmer i Dommer.Udfordring1_2_1");
+        }
+        
+        if (answer.SequenceEqual(new string[] {"Bobby", "Karen", "Felix", "Lise"}))
+        {
+            Debug.Log("Svaret er korrekt!");
+            WriteProgress(typeof(U1_2_1), true);
+            return;
+        }
+
+        WriteProgress(typeof(U1_2_1), false);
+        throw new WrongAnswerExeption($"{StringArrayToString(answer)} er ikke det korrekte svar");
+        
+    }
+    
+    public static void Udfordring1_2_2(int answer)
+    {
+        if (answer == 35)
+        {
+            Debug.Log("Svaret er korrekt!");
+            WriteProgress(typeof(U1_2_2), true);
+            return;
+        }
+
+        WriteProgress(typeof(U1_2_2), false);
+        throw new WrongAnswerExeption($"{answer} er ikke det korrekte svar");
+        
+    }
+    
+    public static void Udfordring1_2_3(int answer)
     {
         if (answer == 341666)
         {
             Debug.Log("Svaret er korrekt!");
-            WriteProgress(typeof(U1_2), true);
+            WriteProgress(typeof(U1_2_3), true);
             return;
         }
 
-        WriteProgress(typeof(U1_2), false);
+        WriteProgress(typeof(U1_2_3), false);
         throw new WrongAnswerExeption($"{answer} er ikke det korrekte svar");
     }
     
     public static void Udfordring1_3(int[] answer)
     {
+        if (answer == null)
+        {
+            WriteProgress(typeof(U1_3), false);
+            throw new WrongAnswerExeption($"Indsæt dit svar i Dommer.Udfordring1_3");
+        }
+        
         if (answer.SequenceEqual(new int[] {79, 47, 80, 913, 1543, 296, 1183, 340066}))
         {
             Debug.Log("Svaret er korrekt!");
@@ -55,6 +101,12 @@ public static class Dommer
     
     public static void Udfordring1_4(int[] answer)
     {
+        if (answer == null)
+        {
+            WriteProgress(typeof(U1_4), false);
+            throw new WrongAnswerExeption($"Indsæt dit svar i Dommer.Udfordring1_4");
+        }
+        
         if (answer.SequenceEqual(new int[] {0 ,0 ,123 ,167 ,0 ,0 ,0 ,137 ,0 ,170 ,102 ,110 ,0 ,0 ,133 ,183 ,0 ,0 ,0 ,0 ,0 ,0 ,103 ,0 ,0 ,0 ,0 ,109 ,0 ,174 ,0 ,0 ,112 ,173 ,0 ,146 ,0 ,133 ,0 ,175 ,0 ,186 ,0 ,0 ,0 ,0 ,133 ,118 ,0 ,185 ,160 ,112 ,0 ,0 ,0 ,0 ,115 ,0 ,0 ,0 ,175 ,175 ,188 ,0 ,0 ,113 ,0 ,169 ,180 ,124 ,193 ,0 ,173 ,102 ,0 ,148 ,0 ,146 ,191 ,0 ,125 ,0 ,118 ,102 ,0 ,0 ,111 ,0 ,0 ,0 ,0 ,192 ,0 ,115 ,0 ,0 ,0 ,172 ,145 ,0 ,125 ,0 ,0 ,131 ,0 ,138 ,0 ,166 ,0 ,119 ,178 ,154 ,0 ,0 ,0 ,0 ,0 ,146 ,176 ,123 ,0 ,160 ,171 ,0 ,0 ,145 ,0 ,0 ,102 ,140 ,187 ,143 ,177 ,0 ,155 ,0 ,0 ,151 ,195 ,0 ,0 ,144 ,0 ,0 ,158 ,102 ,158 ,0 ,192 ,0 ,126 ,150 ,0 ,104 ,190 ,0 ,0 ,112 ,155 ,0 ,181 ,170 ,0 ,135 ,0 ,0 ,0 ,0 ,0 ,0 ,128 ,0 ,145 ,174 ,104 ,126 ,0 ,102 ,0 ,0 ,0 ,0 ,0 ,182 ,148 ,0 ,128 ,155 ,0 ,0 ,0 ,0 ,155 ,172 ,0 ,165 ,147 ,0 ,157 ,0 ,0 ,0 ,0 ,0 ,187 ,0 ,0 ,0 ,180 ,0 ,0 ,0 ,103 ,0 ,0 ,0 ,0 ,0 ,124 ,0 ,0 ,0 ,0 ,0 ,157 ,0 ,167 ,197 ,0 ,106 ,150 ,0 ,0 ,199 ,110 ,0 ,0 ,166 ,0 ,0 ,176 ,0 ,0 ,128 ,0 ,182 ,148 ,0 ,0 ,178 ,190 ,0 ,0 ,119 ,187 ,0}))
         {
             Debug.Log("Svaret er korrekt!");
@@ -68,7 +120,13 @@ public static class Dommer
     
     public static void Udfordring1_5(int[] answer)
     {
-        if (answer.SequenceEqual(new int[] {45 ,21 ,123 ,167 ,63 ,75 ,33 ,137 ,0 ,0 ,0 ,0 ,19 ,9 ,133 ,183 ,3 ,47 ,11 ,0 ,29 ,11 ,103 ,81 ,0 ,73 ,43 ,109 ,55 ,0 ,0 ,89 ,0 ,173 ,47 ,0 ,87 ,133 ,0 ,175 ,0 ,0 ,0 ,1 ,0 ,0 ,133 ,0 ,75 ,185 ,0 ,0 ,7 ,0 ,51 ,83 ,115 ,61 ,99 ,0 ,175 ,175 ,0 ,67 ,0 ,113 ,45 ,169 ,0 ,0 ,193 ,53 ,173 ,0 ,0 ,0 ,0 ,0 ,191 ,0 ,125 ,59 ,0 ,0 ,67 ,0 ,111 ,39 ,11 ,89 ,77 ,0 ,43 ,115 ,99 ,97 ,0 ,0 ,145 ,77 ,125 ,0 ,0 ,131 ,35 ,0 ,0 ,0 ,0 ,119 ,0 ,0 ,65 ,0 ,35 ,0 ,0 ,0 ,0 ,123 ,0 ,0 ,171 ,0 ,0 ,145 ,31 ,87 ,0 ,0 ,187 ,143 ,177 ,95 ,155 ,0 ,0 ,151 ,195 ,0 ,0 ,0 ,85 ,39 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,67 ,0 ,0 ,67 ,0 ,0 ,155 ,0 ,181 ,0 ,31 ,135 ,91 ,0 ,45 ,0 ,35 ,0 ,0 ,0 ,145 ,0 ,0 ,0 ,89 ,0 ,17 ,0 ,0 ,71 ,0 ,0 ,0 ,0 ,0 ,155 ,0 ,0 ,23 ,21 ,155 ,0 ,93 ,165 ,147 ,0 ,157 ,0 ,97 ,0 ,97 ,69 ,187 ,0 ,0 ,0 ,0 ,0 ,51 ,25 ,103 ,7 ,0 ,91 ,0 ,97 ,0 ,0 ,21 ,63 ,0 ,45 ,157 ,99 ,167 ,197 ,0 ,0 ,0 ,0 ,0 ,199 ,0 ,0 ,0 ,0 ,17 ,0 ,0 ,77 ,61 ,0 ,67 ,0 ,0 ,0 ,21 ,0 ,0 ,0 ,1 ,119 ,187 ,0}))
+        if (answer == null)
+        {
+            WriteProgress(typeof(U1_5), false);
+            throw new WrongAnswerExeption($"Indsæt dit svar i Dommer.Udfordring1_5");
+        }
+        
+        if (answer.SequenceEqual(new int[] {45, 123, 63, 33, 82, 102, 19, 133, 3, 11, 29, 103, 18, 43, 55, 50, 112, 47, 87, 14, 68, 42, 50, 133, 75, 160, 7, 51, 115, 99, 175, 188, 24, 45, 180, 193, 173, 62, 48, 191, 125, 118, 67, 111, 11, 77, 43, 99, 64, 145, 125, 38, 35, 74, 94, 178, 65, 35, 70, 176, 64, 171, 30, 31, 102, 187, 177, 155, 46, 195, 82, 85, 158, 158, 192, 126, 67, 190, 14, 155, 181, 31, 91, 45, 35, 128, 145, 104, 89, 17, 74, 86, 148, 128, 46, 23, 155, 93, 147, 157, 97, 97, 187, 74, 180, 51, 103, 40, 14, 124, 21, 74, 157, 167, 46, 150, 48, 110, 42, 17, 176, 61, 67, 148, 21, 190, 1, 187}))
         {
             Debug.Log("Svaret er korrekt!");
             WriteProgress(typeof(U1_5), true);
@@ -249,7 +307,75 @@ public static class Dommer
     #endregion
 
     
- 
+    public static string StringArrayToString(string[] array)
+    {
+        string a = "{";
+        
+        for (int i = 0; i < array.Length; i++)
+        {
+
+            a += array[i];
+
+            if (i != array.Length - 1)
+                a += ", ";
+        }
+
+        a += "}";
+        return a;
+    }
+    
+    public static string IntArrayToString(int[] array)
+    {
+        string a = "{";
+        
+        for (int i = 0; i < array.Length; i++)
+        {
+
+            a += array[i].ToString();
+
+            if (i != array.Length - 1)
+                a += ", ";
+        }
+
+        a += "}";
+        return a;
+    }
+    
+    // public static void DebugDict(Dictionary<Spiller, int> answer)
+    // {
+    //     string a = "{";
+    //
+    //     foreach (KeyValuePair<Spiller, int> fore in answer)
+    //     {
+    //         a += $"new KeyValuePair<Spiller, int>({fore.Key}, {fore.Value})";
+    //         a += " ,";
+    //
+    //     }
+    //
+    //     a += "}";
+    //     Debug.Log(a);
+    // }
+    
+    // public static void DebugClass(Hest[] answer)
+    // {
+    //     string a = "{";
+    //     
+    //     for (int i = 0; i < answer.Length; i++)
+    //     {
+    //         a += "new Hest(";
+    //         a += answer[i].hastighed;
+    //         a += ", ";
+    //         a += answer[i].udholdenhed;
+    //
+    //
+    //         a += ")";
+    //         if (i != answer.Length - 1)
+    //             a += " ,";
+    //     }
+    //
+    //     a += "};";
+    //     Debug.Log(a);
+    // }
     
     private static void WriteProgress(Type type, bool solved)
     {
