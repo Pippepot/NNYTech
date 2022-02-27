@@ -1,0 +1,29 @@
+    
+    public static void Udfordring4_1(Dictionary<int, string> telefonbog)
+    {
+        if (telefonbog.ContainsValue("Konrad") && telefonbog.ContainsValue("Lars jr.") && !telefonbog.ContainsValue("Lars"))
+        {
+            Debug.Log("Svaret er korrekt!");
+            WriteProgress(typeof(U4_1), true);
+            return;
+        }
+
+        WriteProgress(typeof(U4_1), false);
+        throw new WrongAnswerExeption($"Telfonbogen er ikke korrekt");
+    }
+    
+    public static void Udfordring4_2(Dictionary<string, int> spillerPoint)
+    {
+        if (spillerPoint.ContainsValue(47) && spillerPoint.ContainsValue(45))
+        {
+            Debug.Log("Svaret er korrekt!");
+            WriteProgress(typeof(U4_2), true);
+            return;
+        }
+
+        WriteProgress(typeof(U4_2), false);
+        throw new WrongAnswerExeption($"Svaret er ikke korrekt");
+    }
+    
+
+    

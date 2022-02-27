@@ -1,0 +1,60 @@
+   
+    public static void Udfordring3_1(Person person)
+    {
+        if (person.alder == 18)
+        {
+            Debug.Log("Svaret er korrekt!");
+            WriteProgress(typeof(U3_1), true);
+            return;
+        }
+
+        WriteProgress(typeof(U3_1), false);
+        throw new WrongAnswerExeption($"{person.alder} er ikke den korrekte alder");
+    }
+    
+    public static void Udfordring3_2(Kriger kriger)
+    {
+        if (kriger.level == 47)
+        {
+            Debug.Log("Svaret er korrekt!");
+            WriteProgress(typeof(U3_2), true);
+            return;
+        }
+
+        WriteProgress(typeof(U3_2), false);
+        throw new WrongAnswerExeption($"Krigeren med level {kriger.level} er ikke korrekt");
+    }
+    
+    public static void Udfordring3_3(AdvanceretKriger kriger)
+    {
+        Debug.Log(kriger.liv + " " + kriger.skade + " " + kriger.blokering);
+        if (kriger.liv == 1 && kriger.skade == 2 && kriger.blokering == 1)
+        {
+            Debug.Log("Svaret er korrekt!");
+            WriteProgress(typeof(U3_3), true);
+            return;
+        }
+
+        WriteProgress(typeof(U3_3), false);
+        throw new WrongAnswerExeption($"Dette er ikke den korrekte kriger");
+    }
+    
+    public static void Udfordring3_4(Hest[] heste)
+    {
+        if (heste.Length == 5 &&
+            Mathf.Round(heste[0].LøbeTid(100)) == 3 &&
+            Mathf.Round(heste[1].LøbeTid(200)) == 7 &&
+            Mathf.Round(heste[2].LøbeTid(500)) == 17 &&
+            Mathf.Round(heste[3].LøbeTid(1000)) == 34 &&
+            Mathf.Round(heste[4].LøbeTid(50000)) == 3571)
+        {
+            Debug.Log("Svaret er korrekt!");
+            WriteProgress(typeof(U3_4), true);
+            return;
+        }
+
+        WriteProgress(typeof(U3_4), false);
+        throw new WrongAnswerExeption($"Det var ikke de rigtige heste, der vandt");
+    }
+
+    

@@ -49,13 +49,9 @@ public class U2_0 : MonoBehaviour
         // Hvis man sætte størrelsen til 0 i enten x, y eller z-aksen forsvinder objektet
         
         
-        // Sæt localScale tilbage til det den var før (1, 1, 1)
+        // Sæt localScale tilbage til det den var før: (1, 1, 1)
         
         Dommer.Udfordring2_0(transform);
     }
-    
-    #region Hint 1
-    // Gør brug af transform.position
-    #endregion
-    
+
 }

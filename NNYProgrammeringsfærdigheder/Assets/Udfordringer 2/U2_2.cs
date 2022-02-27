@@ -17,9 +17,5 @@ public class U2_2 : MonoBehaviour
 
         Dommer.Udfordring2_2(transform);
     }
-    
-    #region Hint 1
-    // Ved rotation, gør transform.Rotate
-    #endregion
-    
+
 }

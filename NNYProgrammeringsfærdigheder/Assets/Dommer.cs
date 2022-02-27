@@ -223,10 +223,37 @@ public static class Dommer
     #endregion
     
     #region 3
-    
-    public static void Udfordring3_1(Person person)
+
+    public static void Udfordring3_0()
     {
-        if (person.alder == 18)
+        GameObject obj = GameObject.Find("super objekt1");
+        if (obj == null)
+        {
+            WriteProgress(typeof(U3_0), false);
+            throw new WrongAnswerExeption($"Der findes ikke et objekt med navn 'super objekt1'");
+        }
+        
+        if (obj.transform.position == new Vector3(3, 4, 5))
+        {
+            Debug.Log("Svaret er korrekt!");
+            WriteProgress(typeof(U3_0), true);
+            return;
+        }
+
+        WriteProgress(typeof(U3_0), false);
+        throw new WrongAnswerExeption($"Positionen {obj.transform.position} på objekt {obj.name} er ikke korrekt");
+    }
+    
+    public static void Udfordring3_1()
+    {
+        GameObject obj = GameObject.Find("Turret(Clone)");
+        if (obj == null)
+        {
+            WriteProgress(typeof(U3_1), false);
+            throw new WrongAnswerExeption($"Der findes ikke et objekt med navn 'Turret(Clone)'");
+        }
+        
+        if (Mathf.Approximately(obj.transform.eulerAngles.y, 30))
         {
             Debug.Log("Svaret er korrekt!");
             WriteProgress(typeof(U3_1), true);
@@ -234,88 +261,86 @@ public static class Dommer
         }
 
         WriteProgress(typeof(U3_1), false);
-        throw new WrongAnswerExeption($"{person.alder} er ikke den korrekte alder");
+        throw new WrongAnswerExeption($"Rotationen {obj.transform.eulerAngles} på objekt {obj.name} er ikke korrekt");
     }
-    
-    public static void Udfordring3_2(Kriger kriger)
+
+    public static void Udfordring3_2(MonoBehaviour behaviour)
     {
-        if (kriger.level == 47)
+        behaviour.StartCoroutine(WaitForUdfordring3_2());
+    }
+
+    private static IEnumerator WaitForUdfordring3_2()
+    {
+        yield return null;
+        
+        GameObject obj = GameObject.Find("Projectile(Clone)");
+        
+        if (obj == null)
+        {
+            WriteProgress(typeof(U3_2), false);
+            throw new WrongAnswerExeption($"Der findes ikke et objekt med navn 'Projectile(Clone)'");
+        }
+        
+        Rigidbody body = obj.GetComponent<Rigidbody>();
+        if (body == null)
+        {
+            WriteProgress(typeof(U3_2), false);
+            throw new WrongAnswerExeption($"Der findes ikke noget Rigidbody component på {obj.name}");
+        }
+        
+        if (body.velocity.y > 0)
         {
             Debug.Log("Svaret er korrekt!");
             WriteProgress(typeof(U3_2), true);
-            return;
+            yield break;
         }
 
         WriteProgress(typeof(U3_2), false);
-        throw new WrongAnswerExeption($"Krigeren med level {kriger.level} er ikke korrekt");
+        throw new WrongAnswerExeption($"Velocity i y-aksen {body.velocity.y} på objekt {obj.name} er ikke opadgående");
     }
     
-    public static void Udfordring3_3(AdvanceretKriger kriger)
+    public static void Udfordring3_3(MonoBehaviour behaviour)
     {
-        Debug.Log(kriger.liv + " " + kriger.skade + " " + kriger.blokering);
-        if (kriger.liv == 1 && kriger.skade == 2 && kriger.blokering == 1)
+        
+        
+        behaviour.StartCoroutine(WaitForUdfordring3_3());
+    }
+    
+    private static IEnumerator WaitForUdfordring3_3()
+    {
+        yield return null;
+        
+        GameObject obj = GameObject.Find("Projectile(Clone)");
+        
+        if (obj == null)
+        {
+            WriteProgress(typeof(U3_3), false);
+            throw new WrongAnswerExeption($"Der findes ikke et objekt med navn 'Projectile(Clone)'");
+        }
+        
+        Rigidbody body = obj.GetComponent<Rigidbody>();
+        if (body == null)
+        {
+            WriteProgress(typeof(U3_3), false);
+            throw new WrongAnswerExeption($"Der findes ikke noget Rigidbody component på {obj.name}");
+        }
+        
+        if (Vector3.Dot(body.velocity.normalized, new Vector3(-7.0f, 0.7f, -7.0f).normalized) > 0.9999f)
         {
             Debug.Log("Svaret er korrekt!");
             WriteProgress(typeof(U3_3), true);
-            return;
+            yield break;
         }
 
         WriteProgress(typeof(U3_3), false);
-        throw new WrongAnswerExeption($"Dette er ikke den korrekte kriger");
+        throw new WrongAnswerExeption($"Velocity {body.velocity} på objekt {obj.name} har ikke den korrekte retning");
     }
     
-    public static void Udfordring3_4(Hest[] heste)
-    {
-        if (heste.Length == 5 &&
-            Mathf.Round(heste[0].LøbeTid(100)) == 3 &&
-            Mathf.Round(heste[1].LøbeTid(200)) == 7 &&
-            Mathf.Round(heste[2].LøbeTid(500)) == 17 &&
-            Mathf.Round(heste[3].LøbeTid(1000)) == 34 &&
-            Mathf.Round(heste[4].LøbeTid(50000)) == 3571)
-        {
-            Debug.Log("Svaret er korrekt!");
-            WriteProgress(typeof(U3_4), true);
-            return;
-        }
-
-        WriteProgress(typeof(U3_4), false);
-        throw new WrongAnswerExeption($"Det var ikke de rigtige heste, der vandt");
-    }
-
-    
-
     #endregion
 
+    
     #region 4
-    
-    public static void Udfordring4_1(Dictionary<int, string> telefonbog)
-    {
-        if (telefonbog.ContainsValue("Konrad") && telefonbog.ContainsValue("Lars jr.") && !telefonbog.ContainsValue("Lars"))
-        {
-            Debug.Log("Svaret er korrekt!");
-            WriteProgress(typeof(U4_1), true);
-            return;
-        }
 
-        WriteProgress(typeof(U4_1), false);
-        throw new WrongAnswerExeption($"Telfonbogen er ikke korrekt");
-    }
-    
-    public static void Udfordring4_2(Dictionary<string, int> spillerPoint)
-    {
-        if (spillerPoint.ContainsValue(47) && spillerPoint.ContainsValue(45))
-        {
-            Debug.Log("Svaret er korrekt!");
-            WriteProgress(typeof(U4_2), true);
-            return;
-        }
-
-        WriteProgress(typeof(U4_2), false);
-        throw new WrongAnswerExeption($"Svaret er ikke korrekt");
-    }
-    
-
-    
 
     #endregion
 
