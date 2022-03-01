@@ -8,7 +8,7 @@ public class U1_4 : MonoBehaviour
 {
 
     // Lav et int array (som du kan kalde 'svar') som er lige så langt som a
-    // Hvis et tal til et indeks i a er større end 100, er 'svar' til indekset lig med det tal. Ellers er 'svar' til indekset 0
+    // Hvis et tal til et indeks i a er STØRRE end 100, er 'svar' til indekset lig med det tal. Ellers er 'svar' til indekset 0
     
     // F.eks. hvis a[index] = 45, er svar[index] = 0
     // Eller hvis a[index] = 120, er svar[index] = 120

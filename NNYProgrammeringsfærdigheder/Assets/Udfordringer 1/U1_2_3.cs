@@ -7,7 +7,7 @@ using UnityEngine;
 public class U1_2_3 : MonoBehaviour
 {
 
-    // Lav en variabel som lægger alle tallene i 'a' sammen (summen af alle tal i 'a')
+    // Lav en variabel som lægger alle tallene i 'a' sammen (summen af alle tal i 'a' (23 + 45 + 76...))
     // Gør brug af for loop til dette
     // Set svaret ind som argument i Dommer.Udfordring;
     
