@@ -146,11 +146,11 @@ public static class Dommer
         if (transform.localScale == new Vector3(1, 1, 1))
         {
             Debug.Log("Svaret er korrekt!");
-            WriteProgress(typeof(U2_1), true);
+            WriteProgress(typeof(U2_0), true);
             return;
         }
 
-        WriteProgress(typeof(U2_1), false);
+        WriteProgress(typeof(U2_0), false);
         throw new WrongAnswerExeption($"Størrelsen {transform.localScale} er ikke korrekt");
     }
     
@@ -194,7 +194,7 @@ public static class Dommer
     
     public static void Udfordring2_3(Transform transform)
     {
-        if (transform.position.x == 28)
+        if (transform.position.x == -1408)
         {
             Debug.Log("Svaret er korrekt!");
             WriteProgress(typeof(U2_3), true);

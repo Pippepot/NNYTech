@@ -26,11 +26,11 @@ public class U1_2_1 : MonoBehaviour
         // Man kan også lave et array, som indeholder variable fra start
         string[] familieMedlemmer = new string[] {"Bob", "Karen", "Felix", "Lise"};
         // Her behøves man ikke at skrive, hvor langt arrayet er. Det bliver 4 langt, da der er 4 navne
-        
+
         // Prøv at ændre "Bob" i familieMedlemmer til "Bobby" på samme måde som vi ændrede værdien for 'a' ovenover
-        
+
         // Erstat 'null' med 'familiemedlemmer' i Dommer.Udfordring1_2_1 
-        // Her er det vigtigt, at man ikke indsætter "Bobby", da man får en fejl.
+        // Her er det vigtigt, at man ikke indsætter "Bobby" i Dommer.Udfordring1_2_1, da man får en fejl.
         // Dommer.Udfordring1_2_3 spørger om et string[], det vil sige, at den vil have beholderen, som indeholder alle navnene, altså 'familiemedlemmer'
         Dommer.Udfordring1_2_1(null);
     }

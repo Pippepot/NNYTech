@@ -15,7 +15,7 @@ public class U2_3 : MonoBehaviour
         // Positionen skal altså først flyttes med -45, så 21
         // Når positionen er flyttet 2 gange, er den altså -45 + 21 = -24
         // Du skal bare flytte positionen 256 gange :)
-        
+
         Dommer.Udfordring2_3(transform);
     }
     

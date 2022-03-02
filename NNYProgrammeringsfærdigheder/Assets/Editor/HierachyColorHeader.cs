@@ -26,9 +26,16 @@ public static class HierachyColorHeader
                 string[] lines = File.ReadAllLines(path);
                 for (int i = 0; i < lines.Length; i++)
                 {
-                    if (gameObject.GetComponent(Type.GetType(lines[i] + ",Assembly-CSharp")) != null)
+                    try
                     {
-                        color = new Color(0f, 0.9f, 0);
+                        if (gameObject.GetComponent(Type.GetType(lines[i] + ",Assembly-CSharp")) != null)
+                        {
+                            color = new Color(0f, 0.9f, 0);
+                        }
+                    }
+                    catch (Exception)
+                    {
+
                     }
                 }
             }
