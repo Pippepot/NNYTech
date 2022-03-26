@@ -33,6 +33,32 @@ public static class Dommer
         throw new WrongAnswerExeption($"{answer} er ikke det korrekte svar");
     }
     
+    public static void Udfordring1_1_2(int answer)
+    {
+        if (answer == 25468)
+        {
+            Debug.Log("Svaret er korrekt!");
+            WriteProgress(typeof(U1_1_2), true);
+            return;
+        }
+
+        WriteProgress(typeof(U1_1_2), false);
+        throw new WrongAnswerExeption($"{answer} er ikke det korrekte svar");
+    }
+    
+    public static void Udfordring1_1_3(int answer)
+    {
+        if (answer == 36)
+        {
+            Debug.Log("Svaret er korrekt!");
+            WriteProgress(typeof(U1_1_3), true);
+            return;
+        }
+
+        WriteProgress(typeof(U1_1_3), false);
+        throw new WrongAnswerExeption($"{answer} er ikke det korrekte svar");
+    }
+    
     public static void Udfordring1_2_1(string[] answer)
     {
         if (answer == null)
@@ -50,12 +76,11 @@ public static class Dommer
 
         WriteProgress(typeof(U1_2_1), false);
         throw new WrongAnswerExeption($"{StringArrayToString(answer)} er ikke det korrekte svar");
-        
     }
     
-    public static void Udfordring1_2_2(int answer)
+    public static void Udfordring1_2_2(int[] answer)
     {
-        if (answer == 35)
+        if (answer.SequenceEqual(new int[] {35, 45, 80}))
         {
             Debug.Log("Svaret er korrekt!");
             WriteProgress(typeof(U1_2_2), true);
@@ -63,13 +88,12 @@ public static class Dommer
         }
 
         WriteProgress(typeof(U1_2_2), false);
-        throw new WrongAnswerExeption($"{answer} er ikke det korrekte svar");
-        
+        throw new WrongAnswerExeption($"{IntArrayToString(answer)} er ikke det korrekte svar");
     }
     
     public static void Udfordring1_2_3(int answer)
     {
-        if (answer == 341666)
+        if (answer == 35)
         {
             Debug.Log("Svaret er korrekt!");
             WriteProgress(typeof(U1_2_3), true);
@@ -77,6 +101,19 @@ public static class Dommer
         }
 
         WriteProgress(typeof(U1_2_3), false);
+        throw new WrongAnswerExeption($"{answer} er ikke det korrekte svar");
+    }
+    
+    public static void Udfordring1_2_4(int answer)
+    {
+        if (answer == 341666)
+        {
+            Debug.Log("Svaret er korrekt!");
+            WriteProgress(typeof(U1_2_4), true);
+            return;
+        }
+
+        WriteProgress(typeof(U1_2_4), false);
         throw new WrongAnswerExeption($"{answer} er ikke det korrekte svar");
     }
     
@@ -146,11 +183,11 @@ public static class Dommer
         if (transform.localScale == new Vector3(1, 1, 1))
         {
             Debug.Log("Svaret er korrekt!");
-            WriteProgress(typeof(U2_1), true);
+            WriteProgress(typeof(U2_0), true);
             return;
         }
 
-        WriteProgress(typeof(U2_1), false);
+        WriteProgress(typeof(U2_0), false);
         throw new WrongAnswerExeption($"Størrelsen {transform.localScale} er ikke korrekt");
     }
     

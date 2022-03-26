@@ -19,6 +19,7 @@ public class U1_3 : MonoBehaviour
         int[] b = new int[8] {56, 2, 3, 868, 776, 23, 778, 34};
 
 
+        // Her skal svaret være et 'int[]' og altså ikke bare et 'int'
         Dommer.Udfordring1_3(null);
     }
     
