@@ -7,7 +7,7 @@ using UnityEngine;
 public class U1_1_2 : MonoBehaviour
 {
 
-    // Multiplicer 'a' og 'b' og divider med c
+    // Multiplicer 'a' med 'b' og divider med 'c'
     // Set svaret ind som argument i Dommer.Udfordring1_1_2('svar her');
     void Start()
     {
