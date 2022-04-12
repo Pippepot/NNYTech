@@ -372,16 +372,26 @@ public static class Dommer
         WriteProgress(typeof(U3_3), false);
         throw new WrongAnswerExeption($"Velocity {body.velocity} på objekt {obj.name} har ikke den korrekte retning");
     }
-    
+
     #endregion
 
-    
     #region 4
 
 
     #endregion
 
-    
+    #region Bonus
+    public static void Bonus1StartTimer()
+    {
+
+    }
+
+    public static void Bonus1()
+    {
+
+    }
+
+    #endregion
     public static string StringArrayToString(string[] array)
     {
         string a = "{";
