@@ -1,0 +1,3 @@
+I dag skal vi lave nogle flere features
+Målet for i dag, er at få lavet nogle af de samme features fra sidst (Death, End, CameraFollow)
+Plus to nye valgfrie features
