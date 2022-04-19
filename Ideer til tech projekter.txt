@@ -1,0 +1,7 @@
+Shooting anim til 2d
+Camera controls
+Coroutines
+VR
+FPS
+Speedrun game
+AI
