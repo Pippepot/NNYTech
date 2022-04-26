@@ -1,0 +1,17 @@
+Jeg startede med at skrive et simpelt attack script, men efterhånden som jeg ville have flere attacks, blev det meget kompliceret
+Man kan angribe med ranged eller normal
+Udover det kan man modificere sit angreb med 'sneak' og 'strong'
+
+Det ser horribelt ud: gør noget ved det
+Jeg har hørt, at man kan udføre samme funktion med 1/5 kode
+
+Der er optimalt, hvis man højest har ikke har nogen 'if sætning' inde i en anden 'if sætning'
+dvs. følgende er et no-no
+
+if (something)
+{
+    if (something else)
+    {
+
+    }
+}

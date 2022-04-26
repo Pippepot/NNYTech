@@ -1,0 +1,3 @@
+Jeg har skrevet noget kode som virker i mit ene level, men da jeg lavede en teleporter teleporterede til et andet level fik jeg en fejl.
+Hvad pokker har jeg gjort galt?
+Jeg tænker at problemet kan fikses inde i FollowCamera.cs, men det er nok en god ide at identificere problemet først

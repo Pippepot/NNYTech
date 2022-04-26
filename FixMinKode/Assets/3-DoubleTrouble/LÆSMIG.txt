@@ -1,0 +1,6 @@
+I mit spil har jeg to players: Én spiller, der styrer med WAD, og en spiller, der styrer med piletasterne
+Jeg har lavet et script til hver spiller og de gør nogenlunde det samme.
+Men det er dødhamrende irriterende, at jeg skal ændre i begge scripts, selvom jeg kun vil lave ÉN ny feature.
+
+Kombiner PlayerController1 med PlayerController2 i CombinedPlayerController
+CombinedPlayerController skal kunne sættes på begge players og gøre samme arbejde, som PlayerController1 og PlayerController2 gør.
