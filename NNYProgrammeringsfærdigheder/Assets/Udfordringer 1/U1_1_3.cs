@@ -18,7 +18,7 @@ public class U1_1_3 : MonoBehaviour
         int d = 2;
         
         // Svaret skal erstatte '0'
-        Dommer.Udfordring1_1_3((a * b - c) / d);
+        Dommer.Udfordring1_1_3(0);
     }
     
 }
