@@ -226,7 +226,6 @@ public static class Dommer
 
         Debug.Log("Svaret er korrekt!");
         WriteProgress(typeof(U2_2), true);
-        return;
     }
     
     public static void Udfordring2_3(Transform transform)
@@ -338,8 +337,6 @@ public static class Dommer
     
     public static void Udfordring3_3(MonoBehaviour behaviour)
     {
-        
-        
         behaviour.StartCoroutine(WaitForUdfordring3_3());
     }
     
@@ -374,25 +371,8 @@ public static class Dommer
     }
 
     #endregion
-
-    #region 4
-
-
-    #endregion
-
-    #region Bonus
-    public static void Bonus1StartTimer()
-    {
-
-    }
-
-    public static void Bonus1()
-    {
-
-    }
-
-    #endregion
-    public static string StringArrayToString(string[] array)
+    
+    static string StringArrayToString(string[] array)
     {
         string a = "{";
         
@@ -409,7 +389,7 @@ public static class Dommer
         return a;
     }
     
-    public static string IntArrayToString(int[] array)
+    static string IntArrayToString(int[] array)
     {
         string a = "{";
         
@@ -425,43 +405,7 @@ public static class Dommer
         a += "}";
         return a;
     }
-    
-    // public static void DebugDict(Dictionary<Spiller, int> answer)
-    // {
-    //     string a = "{";
-    //
-    //     foreach (KeyValuePair<Spiller, int> fore in answer)
-    //     {
-    //         a += $"new KeyValuePair<Spiller, int>({fore.Key}, {fore.Value})";
-    //         a += " ,";
-    //
-    //     }
-    //
-    //     a += "}";
-    //     Debug.Log(a);
-    // }
-    
-    // public static void DebugClass(Hest[] answer)
-    // {
-    //     string a = "{";
-    //     
-    //     for (int i = 0; i < answer.Length; i++)
-    //     {
-    //         a += "new Hest(";
-    //         a += answer[i].hastighed;
-    //         a += ", ";
-    //         a += answer[i].udholdenhed;
-    //
-    //
-    //         a += ")";
-    //         if (i != answer.Length - 1)
-    //             a += " ,";
-    //     }
-    //
-    //     a += "};";
-    //     Debug.Log(a);
-    // }
-    
+
     private static void WriteProgress(Type type, bool solved)
     {
         string path = Application.persistentDataPath + "/Progress.txt";
